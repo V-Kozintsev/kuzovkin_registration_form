@@ -1,0 +1,66 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Максимальная ширина формы для центрирования */
+  margin: auto; /* Центрирование формы на странице */
+}
+input[type="text"],
+input[type="email"],
+.input-pasword {
+  width: 600px;
+  height: 53px;
+  margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
+  padding: 0 10px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.input-pasword-return {
+  width: 600px;
+  height: 53px;
+  padding: 0 10px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.btn-form {
+  width: 600px;
+  height: 59px;
+  background-color: #485fc7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+label {
+  display: flex;
+  align-items: center; /* Выравнивание чекбокса и текста по вертикали */
+  margin-top: 10px; /* Отступ сверху от кнопки */
+}
+
+input[type="checkbox"] {
+  width: 24px; /* Ширина чекбокса */
+  height: 24px; /* Высота чекбокса */
+  margin-right: 9px; /* Отступ справа от чекбокса */
+}
+.remember-me {
+  display: flex; /* Используем флекс для расположения элементов */
+  align-items: center; /* Выравниваем по центру */
+  margin-top: 7px; /* Отступ сверху */
+  justify-content: flex-end; /* Убираем отступы по краям */
+}
+p {
+  margin-top: 10px; /* Отступ сверху для параграфа */
+}
+
+a {
+  color: #007bff; /* Цвет ссылки */
+  text-decoration: none; /* Убираем подчеркнутость */
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}

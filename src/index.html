@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KUZOVKIN.INFO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
@@ -30,27 +36,69 @@
     <main>
       <div class="profile-section">
         <div class="profile-photo">
-          <img src="profile-placeholder.png" alt="Профиль" />
+          <img class="pet" src="img/image-boy.png" alt="Профиль" />
         </div>
         <div class="login-register">
-          <h2>Войти / Зарегистрироваться</h2>
-          <p>Зарегистрируйтесь через аккаунт в социальных сетях</p>
-          <div class="social-login">
-            <button>Facebook</button>
-            <button>Google</button>
-            <button>Яндекс</button>
+          <div class="login-register__link-container">
+            <ul>
+              <li class="login-item">
+                <a class="login-link" href="/login">Войти</a>
+              </li>
+              <li class="register-item">
+                <a class="register-link" href="/register">Зарегистрироваться</a>
+              </li>
+            </ul>
           </div>
-          <p>Или придумайте логин и пароль для входа в личный кабинет</p>
+          <p class="social-signup">
+            Зарегистрируйтесь через аккаунт в социальных сетях
+          </p>
+          <div class="social-icons">
+            <a href="https://mail.ru" target="_blank">
+              <img src="img/email.svg" alt="Mail.ru" />
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="img/free-icon-facebook.svg" alt="Facebook" />
+            </a>
+            <a href="https://vk.com" target="_blank">
+              <img src="img/free-icon-vk.svg" alt="VK" />
+            </a>
+            <a href="https://google.com" target="_blank">
+              <img src="img/free-icon-google.svg" alt="Google" />
+            </a>
+            <a href="https://yandex.ru" target="_blank">
+              <img src="img/free-icon-yandex.svg" alt="Yandex" />
+            </a>
+            <a href="https://gosuslugi.ru" target="_blank">
+              <img src="img/free-png.ru.svg" alt="Госуслуги" />
+            </a>
+          </div>
+          <p class="text-1">или</p>
+          <p class="text-2">
+            придумайте логин и пароль для входа в личный кабинет
+          </p>
           <form>
             <input type="text" placeholder="Введите имя" required />
             <input type="text" placeholder="Введите фамилию" required />
             <input type="email" placeholder="Введите e-mail" required />
-            <input type="password" placeholder="Введите пароль" required />
-            <input type="password" placeholder="Повторите пароль" required />
-            <button type="submit">Зарегистрироваться</button>
+            <input
+              class="input-pasword"
+              type="password"
+              placeholder="Введите пароль"
+              required
+            />
+            <input
+              class="input-pasword-return"
+              type="password"
+              placeholder="Повторите пароль"
+              required
+            />
+            <div class="remember-me">
+              <label> <input type="checkbox" /> Запомнить меня </label>
+            </div>
+            <button class="btn-form" type="submit">Зарегистрироваться</button>
           </form>
+
           <p>Уже есть аккаунт? <a href="#login">Войти</a></p>
-          <label> <input type="checkbox" /> Запомнить меня </label>
         </div>
       </div>
     </main>
