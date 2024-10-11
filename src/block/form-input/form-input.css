@@ -10,7 +10,7 @@ input[type="email"],
   width: 600px;
   height: 53px;
   margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
-  padding: 0 10px; /* Внутренние отступы для удобства ввода */
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
   font-size: 14px; /* Размер шрифта инпутов */
   border: 1px solid black;
   border-radius: 10px;
@@ -18,7 +18,7 @@ input[type="email"],
 .input-pasword-return {
   width: 600px;
   height: 53px;
-  padding: 0 10px; /* Внутренние отступы для удобства ввода */
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
   font-size: 14px; /* Размер шрифта инпутов */
   border: 1px solid black;
   border-radius: 10px;
@@ -63,4 +63,38 @@ a {
 
 a:hover {
   text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+.input-container input {
+  width: 100%; /* Ширина инпута */
+}
+.input-wrapper {
+  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
+}
+.input-wrapper::before {
+  content: ""; /* Псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  background-image: url("../main/icon/free-icon-press-pass-input.svg"); /* Путь к иконке */
+  background-size: contain; /* Изображение будет масштабироваться */
+  background-repeat: no-repeat; /* Запретим повтор */
+  margin: 10px; /* Положение иконки */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
+  width: 33px; /* Ширина иконки */
+  height: 33px; /* Высота иконки */
+}
+.input-password {
+  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
+}
+.input-password::before {
+  content: ""; /* Псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  background-image: url("../main/icon/free-icon-security-lock-input.svg"); /* Путь к иконке */
+  background-size: contain; /* Изображение будет масштабироваться */
+  background-repeat: no-repeat; /* Запретим повтор */
+  margin: 10px; /* Положение иконки */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
+  width: 33px; /* Ширина иконки */
+  height: 33px; /* Высота иконки */
 }

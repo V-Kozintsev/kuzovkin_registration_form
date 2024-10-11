@@ -118,3 +118,10 @@
 ul {
   display: flex;
 }
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+.login-register {
+  margin-left: 0px !important;
+}

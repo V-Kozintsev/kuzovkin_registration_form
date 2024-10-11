@@ -1,6 +1,7 @@
 @import url(block/main/main.css);
 @import url(block/form-input/form-input.css);
 @import url(block/header/header.css);
+@import url(block/footer/footer.css);
 
 @font-face {
   font-family: "Raleway";
@@ -113,12 +114,9 @@ footer {
   max-width: 1920px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 main {
   max-width: 1420px;
   width: 100%;
-  height: 696px;
   margin: 0 auto;
-  margin-top: 17px;
 }

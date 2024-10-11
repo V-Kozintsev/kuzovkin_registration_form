@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KUZOVKIN.INFO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -76,22 +84,33 @@
           <p class="text-2">
             придумайте логин и пароль для входа в личный кабинет
           </p>
-          <form>
-            <input type="text" placeholder="Введите имя" required />
-            <input type="text" placeholder="Введите фамилию" required />
-            <input type="email" placeholder="Введите e-mail" required />
-            <input
-              class="input-pasword"
-              type="password"
-              placeholder="Введите пароль"
-              required
-            />
-            <input
-              class="input-pasword-return"
-              type="password"
-              placeholder="Повторите пароль"
-              required
-            />
+          <form class="input-container">
+            <div class="input-wrapper">
+              <input type="text" placeholder="Введите имя" required />
+            </div>
+            <div class="input-wrapper">
+              <input type="text" placeholder="Введите фамилию" required />
+            </div>
+            <div class="input-wrapper">
+              <input type="email" placeholder="Введите e-mail" required />
+            </div>
+            <div class="input-password">
+              <input
+                class="input-pasword"
+                type="password"
+                placeholder="Введите пароль"
+                required
+              />
+            </div>
+            <div class="input-password">
+              <input
+                class="input-pasword-return"
+                type="password"
+                placeholder="Повторите пароль"
+                required
+              />
+            </div>
+
             <div class="remember-me">
               <label> <input type="checkbox" /> Запомнить меня </label>
             </div>
@@ -103,20 +122,54 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-links">
-        <p>Подготовка:</p>
-        <ul>
-          <li><a href="#tests">Тесты</a></li>
-          <li><a href="#tasks">Решение задач</a></li>
-          <li><a href="#online-board">Онлайн доска</a></li>
-        </ul>
+    <footer class="footer mt-6">
+      <div class="container">
+        <div class="columns is-align-items-flex-start">
+          <div class="column is-3">
+            <p class="is-size-6 mb-4 kuzovkin-title">KUZOVKIN.INFO</p>
+            <p class="is-size-6 mb-4">ИП Кузовкин Владимир Валерьевич</p>
+            <a href="/politic.html">
+              <p class="is-size-6">Политика конфиденциальности</p>
+            </a>
+          </div>
+          <div class="column is-3" id="pk">
+            <h3 class="is-size-5 has-text-weight-bold mb-4">Страницы</h3>
+            <a href="#"><p class="is-size-6 mb-4">Главная</p></a>
+            <a href="#"><p class="is-size-6 mb-4">Календарь</p></a>
+            <a href="#"><p class="is-size-6 mb-4">Блог</p></a>
+          </div>
+          <div class="column is-3" id="pk">
+            <h3 class="is-size-5 has-text-weight-bold mb-4">Подготовка</h3>
+            <a href="#"><p class="is-size-6 mb-4">Тесты</p></a>
+            <a href="#"><p class="is-size-6 mb-4">Решение задач</p></a>
+            <a href="#"><p class="is-size-6 mb-4">Онлайн доска</p></a>
+          </div>
+          <div class="column is-3" id="pk">
+            <h3 class="is-size-5 has-text-weight-bold mb-4">Есть вопросы?</h3>
+            <button
+              class="button callback is-medium is-rounded is-link px-5 py-5 is-size-6"
+              style="width: 219px; height: 40px"
+            >
+              Связаться с нами
+            </button>
+          </div>
+        </div>
+        <div class="pre-footer">
+          <span class="line"></span>
+          <div class="columns mt-5 is-flex is-justify-content-space-between">
+            <div class="column is-size-6 has-text-left">
+              <p>2022 @ Все права защищены</p>
+            </div>
+            <div class="column is-size-6 has-text-right">
+              <div class="pre-footer_flex">
+                <img class="mr-4" src="./img/vk1.svg" alt="" />
+                <img class="mr-4" src="./img/Продвижение-Яндекс1.svg" alt="" />
+                <img src="./img/Продвижение-Яндекс2.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="contact">
-        <p>Есть вопросы?</p>
-        <a href="#contact">Связаться с нами</a>
-      </div>
-      <p>&copy; 2022 Все права защищены</p>
     </footer>
   </body>
 </html>
