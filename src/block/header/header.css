@@ -1,0 +1,51 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  height: 80px;
+}
+
+.logo {
+  align-self: flex-end;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul a {
+  color: black;
+  font-size: 16px;
+  margin-right: 74px;
+}
+
+nav ul li:last-child a {
+  margin-right: 0px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-button {
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background-color: #485fc7;
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+}
+
+.register-button {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  background-color: #e5e5e5;
+  border-radius: 50px;
+  font-size: 14px;
+}

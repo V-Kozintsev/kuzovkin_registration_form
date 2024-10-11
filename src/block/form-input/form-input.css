@@ -1,0 +1,100 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Максимальная ширина формы для центрирования */
+  margin: auto; /* Центрирование формы на странице */
+}
+input[type="text"],
+input[type="email"],
+.input-pasword {
+  width: 600px;
+  height: 53px;
+  margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.input-pasword-return {
+  width: 600px;
+  height: 53px;
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.btn-form {
+  width: 600px;
+  height: 59px;
+  background-color: #485fc7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+label {
+  display: flex;
+  align-items: center; /* Выравнивание чекбокса и текста по вертикали */
+  margin-top: 10px; /* Отступ сверху от кнопки */
+}
+
+input[type="checkbox"] {
+  width: 24px; /* Ширина чекбокса */
+  height: 24px; /* Высота чекбокса */
+  margin-right: 9px; /* Отступ справа от чекбокса */
+}
+.remember-me {
+  display: flex; /* Используем флекс для расположения элементов */
+  align-items: center; /* Выравниваем по центру */
+  margin-top: 7px; /* Отступ сверху */
+  justify-content: flex-end; /* Убираем отступы по краям */
+}
+p {
+  margin-top: 10px; /* Отступ сверху для параграфа */
+}
+
+a {
+  color: #007bff; /* Цвет ссылки */
+  text-decoration: none; /* Убираем подчеркнутость */
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+.input-container input {
+  width: 100%; /* Ширина инпута */
+}
+.input-wrapper {
+  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
+}
+.input-wrapper::before {
+  content: ""; /* Псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  background-image: url("../main/icon/free-icon-press-pass-input.svg"); /* Путь к иконке */
+  background-size: contain; /* Изображение будет масштабироваться */
+  background-repeat: no-repeat; /* Запретим повтор */
+  margin: 10px; /* Положение иконки */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
+  width: 33px; /* Ширина иконки */
+  height: 33px; /* Высота иконки */
+}
+.input-password {
+  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
+}
+.input-password::before {
+  content: ""; /* Псевдоэлемент */
+  position: absolute; /* Абсолютное позиционирование */
+  background-image: url("../main/icon/free-icon-security-lock-input.svg"); /* Путь к иконке */
+  background-size: contain; /* Изображение будет масштабироваться */
+  background-repeat: no-repeat; /* Запретим повтор */
+  margin: 10px; /* Положение иконки */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
+  width: 33px; /* Ширина иконки */
+  height: 33px; /* Высота иконки */
+}
