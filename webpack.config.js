@@ -1,12 +1,14 @@
-const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, './dist'),
     clean: true, // Очищает output папку перед новой сборкой
   },
   plugins: [
@@ -15,25 +17,44 @@ module.exports = {
       filename: 'index.html',
       template: 'src/index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: './css/style.css', // Имя выходного файла для CSS
+      chunkFilename: '[id].css',
+    }),
   ],
+
   module: {
     rules: [
       {
-        test: /\.js$/, // Применяется ко всем .js файлам
-        exclude: /node_modules/, // Исключить папку node_modules
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              // параметры по желанию
+            },
+          },
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          MiniCssExtractPlugin.loader, // Извлечение CSS
+          'css-loader', // Обработка CSS
+        ],
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
         use: {
-          loader: 'babel-loader', // Используем babel-loader для обработки JS
+          loader: 'babel-loader',
         },
       },
       {
-        test: /\.css$/, // Регулярное выражение для нахождения файлов .css
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/, // Для обработки изображений и шрифтов
-        type: 'asset/resource', // Webpack 5 использует asset module
+        test: /\.(png|jpe?g|gif|svg)$/i, // Поддержка различных форматов изображений
+        type: 'asset/resource', // Хранение изображений в отдельной папке
         generator: {
-          filename: 'images/[hash][ext][query]', // Путь к сохраненным изображениям
+          filename: 'images/[hash][ext][query]', // Путь, куда будут сохраняться изображения
         },
       },
     ],
