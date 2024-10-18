@@ -1,16 +1,19 @@
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-family: "Raleway", sans-serif;
   height: 80px;
-}
+} */
 
-.logo {
+/* .logo {
   align-self: flex-end;
 }
-
-nav ul {
+nav {
+  max-width: 100%;
+  display: flex;
+}
+ul {
   display: flex;
   align-items: center;
 }
@@ -23,8 +26,38 @@ nav ul a {
 
 nav ul li:last-child a {
   margin-right: 0px;
+} */
+header {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет элементам перенестись на новую строку */
+  justify-content: space-between; /* Равномерно распределяет пространство между элементами */
+  align-items: center; /* Центрирует элементы по вертикали */
+  padding: 20px; /* Отступы вокруг хедера */
+  font-family: "Raleway", sans-serif;
 }
 
+.logo img {
+  max-height: 60px; /* Устанавливаем максимальную высоту для логотипа */
+}
+nav {
+  flex-grow: 1; /* Заставляет навигацию занимать оставшееся пространство */
+  display: flex;
+  justify-content: center; /* Центрируем навигацию внутри flex-контейнера */
+}
+.flex-nav {
+  display: flex;
+  flex-wrap: wrap; /* Элементы будут переноситься на новую строку при необходимости */
+  gap: 74px; /* Расстояние между элементами навигации */
+  margin: 0;
+  padding: 0;
+  list-style: none; /* Убираем маркеры списка */
+}
+
+.flex-nav a {
+  color: black; /* Цвет текста */
+  text-decoration: none; /* Убираем подчеркивание */
+  font-size: 16px; /* Размер шрифта */
+}
 .button-container {
   display: flex;
   justify-content: center;
@@ -33,19 +66,23 @@ nav ul li:last-child a {
 
 .login-button {
   text-align: center;
-  width: 120px;
+  min-width: 120px; /* Минимальная ширина */
+  max-width: 30vw; /* Максимальная ширина (30% от ширины окна) */
   height: 40px;
   background-color: #485fc7;
   color: white;
   border-radius: 50px;
   font-size: 14px;
+  flex-grow: 1; /* Позволяет кнопке расти */
 }
 
 .register-button {
   text-align: center;
-  width: 200px;
+  min-width: 200px; /* Минимальная ширина */
+  max-width: 50vw; /* Максимальная ширина (50% от ширины окна) */
   height: 40px;
   background-color: #e5e5e5;
   border-radius: 50px;
   font-size: 14px;
+  flex-grow: 1; /* Позволяет кнопке расти */
 }

@@ -2,6 +2,8 @@
 @import url(block/form-input/form-input.css);
 @import url(block/header/header.css);
 @import url(block/footer/footer.css);
+/* tablet */
+@import url(block/adaptive/tablet.css);
 
 @font-face {
   font-family: "Raleway";

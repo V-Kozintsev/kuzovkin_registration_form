@@ -96,11 +96,3 @@ a:hover {
   top: 10px; /* Высота от верхнего края инпута */
   background-image: url("../main/icon/free-icon-hide.svg");
 }
-@media (max-width: 600px) {
-  .input-wrapper,
-  .input-password,
-  .btn-form {
-    width: 100%; /* Инпуты и кнопка занимают 100% ширины на малых экранах */
-    font-size: 12px; /* Меньший размер шрифта при уменьшении экрана */
-  }
-}
