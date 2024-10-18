@@ -132,7 +132,7 @@ form {
   max-width: 600px; /* Максимальная ширина формы для центрирования */
   margin: auto; /* Центрирование формы на странице */
 }
-
+input[type="text"],
 input[type="email"],
 .input-pasword {
   width: 600px;
@@ -143,15 +143,7 @@ input[type="email"],
   border: 1px solid black;
   border-radius: 10px;
 }
-.input-wrapper {
-  width: 600px;
-  height: 53px;
-  margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
-  padding: 0 53px; /* Внутренние отступы для удобства ввода */
-  font-size: 14px; /* Размер шрифта инпутов */
-  border: 1px solid black;
-  border-radius: 10px;
-}
+
 .input-pasword-return {
   width: 600px;
   height: 53px;
@@ -205,35 +197,23 @@ a:hover {
 .input-container input {
   width: 100%; /* Ширина инпута */
 }
-.input-wrapper {
-  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
-}
-.input-wrapper::before {
-  content: ""; /* Псевдоэлемент */
-  position: absolute; /* Абсолютное позиционирование */
-  background-image: url(../images/6d8eeaef7d1cfe0ee52d.svg); /* Путь к иконке */
-  background-size: contain; /* Изображение будет масштабироваться */
-  background-repeat: no-repeat; /* Запретим повтор */
-  margin: 10px; /* Положение иконки */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
-  width: 33px; /* Ширина иконки */
-  height: 33px; /* Высота иконки */
-}
-.input-password {
-  position: relative; /* Устанавливаем относительное позиционирование для родительского контейнера */
-}
+.input-wrapper::before,
 .input-password::before {
-  content: ""; /* Псевдоэлемент */
-  position: absolute; /* Абсолютное позиционирование */
-  background-image: url(../images/db787ad118fb6f38d1b7.svg); /* Путь к иконке */
-  background-size: contain; /* Изображение будет масштабироваться */
-  background-repeat: no-repeat; /* Запретим повтор */
-  margin: 10px; /* Положение иконки */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */ /* Центрируем по вертикали */
-  width: 33px; /* Ширина иконки */
-  height: 33px; /* Высота иконки */
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  width: 33px;
+  height: 33px;
+}
+
+.input-wrapper::before {
+  background-image: url(../images/6d8eeaef7d1cfe0ee52d.svg);
+}
+
+.input-password::before {
+  background-image: url(../images/db787ad118fb6f38d1b7.svg);
 }
 
 header {
