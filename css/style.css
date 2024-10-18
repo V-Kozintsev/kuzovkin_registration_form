@@ -132,7 +132,15 @@ form {
   max-width: 600px; /* Максимальная ширина формы для центрирования */
   margin: auto; /* Центрирование формы на странице */
 }
-input[type="text"],
+input[type="text"] {
+  width: 600px;
+  height: 53px;
+  margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+}
 input[type="email"],
 .input-pasword {
   width: 600px;
