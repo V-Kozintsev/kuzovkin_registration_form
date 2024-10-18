@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 .login-item::before {
   content: "";
@@ -130,13 +131,13 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 600px; /* Максимальная ширина формы для центрирования */
+  width: 95%; /* Ширина формы 100% */
   margin: auto; /* Центрирование формы на странице */
 }
 
 .input-wrapper,
 .input-password {
   position: relative;
-  width: 600px;
   height: 53px;
   margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
   padding: 0 53px; /* Внутренние отступы для удобства ввода */
@@ -145,10 +146,11 @@ form {
   border-radius: 10px;
   display: flex;
   align-items: center;
+  width: 95%; /* Инпуты расп Stretch на 100% родителя */
 }
 
 .btn-form {
-  width: 600px;
+  max-width: 600px; /* Максимальная ширина кнопки */
   height: 59px;
   background-color: #485fc7;
   color: white;
@@ -157,6 +159,7 @@ form {
   font-size: 24px;
   cursor: pointer;
   margin-top: 14px;
+  width: 95%; /* Кнопка на 100% ширины родителя */
 }
 
 label {
@@ -189,9 +192,9 @@ a:hover {
   text-decoration: underline; /* Подчеркивание ссылки при наведении */
 }
 
-.input-container input {
-  width: 100%; /* Ширина инпута */
-}
+/* .input-container input {
+  width: 100%;
+} */
 .input-password::before,
 .input-wrapper::before {
   content: "";
@@ -210,6 +213,25 @@ a:hover {
 
 .input-password::before {
   background-image: url(../images/db787ad118fb6f38d1b7.svg);
+}
+.input-password::after {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 33px;
+  right: 10px; /* Отступ справа для второй иконки */
+  top: 10px; /* Высота от верхнего края инпута */
+  background-image: url(../images/30e265120c797f5e74d8.svg);
+}
+@media (max-width: 600px) {
+  .input-wrapper,
+  .input-password,
+  .btn-form {
+    width: 100%; /* Инпуты и кнопка занимают 100% ширины на малых экранах */
+    font-size: 12px; /* Меньший размер шрифта при уменьшении экрана */
+  }
 }
 
 header {
@@ -266,6 +288,7 @@ nav ul li:last-child a {
 
 footer {
   font-family: "Raleway", sans-serif !important;
+  background-color: white !important;
 }
 .kuzovkin-title {
   font-size: 24px !important;
