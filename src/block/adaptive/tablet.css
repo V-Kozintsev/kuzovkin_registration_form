@@ -1,0 +1,120 @@
+/* Стили для планшетной версии */
+@media (max-width: 1024px) and (min-width: 835px) {
+  header {
+    padding: 15px; /* Уменьшаем отступы для планшетной версии */
+    flex-direction: column; /* Вертикальная ориентация для хедера */
+    align-items: center; /* Центрируем элементы */
+  }
+
+  .login-button,
+  .register-button {
+    min-width: 100px; /* Уменьшаем минимальную ширину кнопок */
+    max-width: 100%; /* Растягиваем кнопки на всю ширину */
+  }
+
+  .profile-section {
+    flex-direction: column; /* Вертикальная ориентация для профиля */
+    align-items: center; /* Центрируем элементы профиля */
+  }
+
+  .profile-photo,
+  .login-register {
+    width: 90%; /* Ширина секций */
+    margin-bottom: 20px; /* Отступ между секциями */
+  }
+
+  .profile-photo img {
+    width: 80%; /* Ширина изображения в профиле для адаптивности */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+  }
+
+  .input-wrapper,
+  .input-password {
+    width: 100%; /* Ширина полей ввода на 100% */
+    margin-bottom: 15px; /* Отступ между инпутами */
+  }
+
+  .btn-form {
+    width: 100%; /* Кнопка на 100% ширины */
+    font-size: 16px; /* Увеличиваем размер шрифта */
+  }
+
+  /* Скрывать или уменьшать неудобные элементы для планшетов */
+  .login-register__link-container ul {
+    flex-direction: column; /* Вертикальная ориентация для ссылок */
+    align-items: center; /* Центрируем ссылки */
+  }
+}
+
+@media (max-width: 834px) {
+  header {
+    padding: 10px; /* Уменьшаем отступы для мобильной версии */
+    flex-direction: column; /* Вертикальная ориентация для хедера */
+    align-items: center; /* Центрируем элементы */
+  }
+
+  .login-button,
+  .register-button {
+    min-width: 80px; /* Уменьшаем минимальную ширину кнопок */
+    max-width: 100%; /* Растягиваем кнопки на всю ширину */
+    font-size: 14px; /* Уменьшаем размер шрифта для мобильных кнопок */
+  }
+
+  .profile-section {
+    flex-direction: column; /* Вертикальная ориентация для профиля */
+    align-items: center; /* Центрируем элементы профиля */
+  }
+
+  .profile-photo,
+  .login-register {
+    width: 95%; /* Ширина секций чуть меньше для мобильных устройств */
+    margin-bottom: 15px; /* Отступ между секциями */
+  }
+
+  .profile-photo img {
+    width: 90%; /* Ширина изображения в профиле для адаптивности */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+  }
+
+  .input-wrapper,
+  .input-password {
+    width: 100%; /* Ширина полей ввода на 100% */
+    margin-bottom: 10px; /* Уменьшаем отступ между инпутами */
+    font-size: 14px; /* Уменьшаем размер шрифта в полях ввода */
+  }
+
+  .btn-form {
+    width: 100%; /* Кнопка на 100% ширины */
+    font-size: 16px; /* Увеличиваем размер шрифта */
+  }
+
+  /* Скрывать или уменьшать неудобные элементы для мобильных устройств */
+  .login-register__link-container ul {
+    flex-direction: column; /* Вертикальная ориентация для ссылок */
+    align-items: center; /* Центрируем ссылки */
+  }
+
+  /* Добавляем стиль для бургер-меню */
+  .menu-toggle {
+    display: flex; /* Показываем бургер-меню */
+    justify-content: space-around;
+    width: 40px; /* Ширина бургер-меню */
+    cursor: pointer; /* Указываем, что это кликабельный элемент */
+    margin-top: 10px; /* Отступ сверху */
+  }
+
+  .nav {
+    display: none; /* Скрываем навигацию по умолчанию */
+    flex-direction: column; /* Вертикальная ориентация меню */
+    width: 100%; /* Ширина меню на пол экрана */
+  }
+
+  .nav.active {
+    display: flex; /* Показываем меню при активации */
+  }
+
+  /* Добавляем плавный переход для открытия/закрытия меню */
+  .nav ul {
+    transition: max-height 0.3s ease; /* Плавный переход для высоты */
+  }
+}

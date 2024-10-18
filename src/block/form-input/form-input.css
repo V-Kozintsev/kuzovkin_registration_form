@@ -1,0 +1,98 @@
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; /* Максимальная ширина формы для центрирования */
+  width: 95%; /* Ширина формы 100% */
+  margin: auto; /* Центрирование формы на странице */
+}
+
+.input-wrapper,
+.input-password {
+  position: relative;
+  height: 53px;
+  margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
+  padding: 0 53px; /* Внутренние отступы для удобства ввода */
+  font-size: 14px; /* Размер шрифта инпутов */
+  border: 1px solid black;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  width: 95%; /* Инпуты расп Stretch на 100% родителя */
+}
+
+.btn-form {
+  max-width: 600px; /* Максимальная ширина кнопки */
+  height: 59px;
+  background-color: #485fc7;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  margin-top: 14px;
+  width: 95%; /* Кнопка на 100% ширины родителя */
+}
+
+label {
+  display: flex;
+  align-items: center; /* Выравнивание чекбокса и текста по вертикали */
+  margin-top: 10px; /* Отступ сверху от кнопки */
+}
+
+input[type="checkbox"] {
+  width: 24px; /* Ширина чекбокса */
+  height: 24px; /* Высота чекбокса */
+  margin-right: 9px; /* Отступ справа от чекбокса */
+}
+.remember-me {
+  display: flex; /* Используем флекс для расположения элементов */
+  align-items: center; /* Выравниваем по центру */
+  margin-top: 7px; /* Отступ сверху */
+  justify-content: flex-end; /* Убираем отступы по краям */
+}
+p {
+  margin-top: 10px; /* Отступ сверху для параграфа */
+}
+
+a {
+  color: #007bff; /* Цвет ссылки */
+  text-decoration: none; /* Убираем подчеркнутость */
+}
+
+a:hover {
+  text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+/* .input-container input {
+  width: 100%;
+} */
+.input-password::before,
+.input-wrapper::before {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  width: 33px;
+  height: 33px;
+  left: 0px;
+}
+
+.input-wrapper::before {
+  background-image: url("../main/icon/free-icon-press-pass-input.svg");
+}
+
+.input-password::before {
+  background-image: url("../main/icon/free-icon-security-lock-input.svg");
+}
+.input-password::after {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 33px;
+  right: 10px; /* Отступ справа для второй иконки */
+  top: 10px; /* Высота от верхнего края инпута */
+  background-image: url("../main/icon/free-icon-hide.svg");
+}
