@@ -6,50 +6,21 @@ form {
 }
 
 .input-wrapper,
-.input-wrapper-text,
 .input-password {
-  position: relative; /* Для корректного позиционирования иконок */
-  width: 100%; /* Сделаем ширину 100% */
-  height: 53px; /* Высота инпутов */
+  position: relative;
+  width: 600px;
+  height: 53px;
   margin-bottom: 10px; /* Отступ между инпутами и кнопкой */
-}
-
-input[type="text"],
-input[type="email"],
-.input-pasword,
-.input-pasword-return {
-  width: 100%; /* Ширина инпута */
-  height: 100%; /* Высота инпута будет соответствовать родителю */
   padding: 0 53px; /* Внутренние отступы для удобства ввода */
   font-size: 14px; /* Размер шрифта инпутов */
   border: 1px solid black;
   border-radius: 10px;
-}
-
-.input-wrapper::before,
-.input-wrapper-text::before,
-.input-password::before {
-  content: "";
-  position: absolute;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 33px; /* Ширина иконки */
-  height: 33px; /* Высота иконки */
-  left: 10px; /* Положение иконки от левого края */
-  top: 10px; /* Положение иконки от верхнего края */
-}
-
-/* Задайте фон иконкам, как было раньше */
-.input-wrapper-text::before {
-  background-image: url("../main/icon/free-icon-press-pass-input.svg");
-}
-
-.input-password::before {
-  background-image: url("../main/icon/free-icon-security-lock-input.svg");
+  display: flex;
+  align-items: center;
 }
 
 .btn-form {
-  width: 100%; /* Ширина кнопки */
+  width: 600px;
   height: 59px;
   background-color: #485fc7;
   color: white;
@@ -71,14 +42,12 @@ input[type="checkbox"] {
   height: 24px; /* Высота чекбокса */
   margin-right: 9px; /* Отступ справа от чекбокса */
 }
-
 .remember-me {
   display: flex; /* Используем флекс для расположения элементов */
   align-items: center; /* Выравниваем по центру */
   margin-top: 7px; /* Отступ сверху */
   justify-content: flex-end; /* Убираем отступы по краям */
 }
-
 p {
   margin-top: 10px; /* Отступ сверху для параграфа */
 }
@@ -90,4 +59,27 @@ a {
 
 a:hover {
   text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+.input-container input {
+  width: 100%; /* Ширина инпута */
+}
+.input-password::before,
+.input-wrapper::before {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px;
+  width: 33px;
+  height: 33px;
+  left: 0px;
+}
+
+.input-wrapper::before {
+  background-image: url("../main/icon/free-icon-press-pass-input.svg");
+}
+
+.input-password::before {
+  background-image: url("../main/icon/free-icon-security-lock-input.svg");
 }
